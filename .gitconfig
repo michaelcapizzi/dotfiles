@@ -1,0 +1,17 @@
+[user]
+	email = gushahnpowell@gmail.com
+	name = Gus Hahn-Powell
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  ls = ls-files
+  discard = checkout -- .
+[push]
+	default = current
+[core]
+	editor = vim
+	excludesfile = /Users/gus/.gitignore_global
+[color]
+	ui = 1

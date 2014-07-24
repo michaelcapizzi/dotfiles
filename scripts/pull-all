@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/github/sistanlp; git pull
+cd ~/github/config-file; git pull
+

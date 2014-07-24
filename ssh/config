@@ -1,0 +1,48 @@
+ForwardAgent yes
+
+Host tunnel1 
+    Hostname tunnel1.sista.arizona.edu
+Host tunnel2
+    Hostname tunnel2.sista.arizona.edu
+
+Host river
+	ForwardX11 yes
+	ProxyCommand ssh -q -W %h:%p tunnel1
+
+Host river2
+    Hostname river
+    ProxyCommand ssh -q -W %h:%p tunnel2
+
+Host amy
+	ForwardX11 yes
+	ProxyCommand ssh -q -W %h:%p tunnel1
+
+Host amy2
+	Hostname amy
+	ProxyCommand ssh -q -W %h:%p tunnel2
+
+Host shamhat
+	ProxyCommand ssh -q gus@tunnel1 exec nc %h %p
+
+Host dalek
+	ProxyCommand ssh -q gus@tunnel1 exec nc %h %p
+
+Host apil
+	User apiladmin
+	Hostname dhcp-80c45e2b.sbs.arizona.edu
+
+Host arizona
+	User hahnpowell
+	Hostname u.arizona.edu
+
+Host dingo
+	User hahnpowell
+	Hostname dingo.sbs.arizona.edu
+
+Host usystem
+	User hahnpowell
+	Hostname u.arizona.edu
+
+Host amazon
+	User gus
+	Hostname parsertongue.com 
