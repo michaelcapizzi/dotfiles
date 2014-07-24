@@ -63,4 +63,5 @@ then
 else
 	echo "custom theme already linked..."
 fi
-source $zshrc
+
+/bin/bash -c 'source .zshrc'
