@@ -116,6 +116,7 @@ if [ -d /data1/nlp ]; then
 		#######################
 		#local sbt
 		export PATH=~/bin:$PATH
+		alias sbt="~/bin/sbt -java-home /home/gus/jdk1.7.0_51/"
 fi
 
 #######################
