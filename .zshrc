@@ -158,3 +158,5 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #git-specific aliases
 alias git-owner="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
 
+#java stuff
+JVM_OPTS="-Xmx2g"
