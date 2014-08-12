@@ -151,6 +151,7 @@ export PATH=~/scripts:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias src="source ~/.zshrc"
+alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
 
 #source syntax highlighting plugin:
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
