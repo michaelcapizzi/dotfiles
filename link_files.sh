@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #add bin directory
-#bindest=~/bin
-#if [ ! -e $bindest ]; 
-#then
-#	bindir=$(pwd -P)'/bin/'
-#	echo "linking bin directory for `whoami`"
-#	ln -s $bindir $bindest
-#else
-#	echo "$bindest already exists..."
-#fi
+bindest=~/bin
+if [ ! -e $bindest ]; 
+then
+	bindir=$(pwd -P)'/bin/'
+	echo "linking bin directory for `whoami`"
+	ln -s $bindir $bindest
+else
+	echo "$bindest already exists..."
+fi
 
 #add .zshrc
 zshrc=~/.zshrc
