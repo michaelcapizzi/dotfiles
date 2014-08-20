@@ -1,5 +1,8 @@
 "Begin .vimrc
 
+"ruby stuff
+let g:ruby_path = "~/.rvm/rubies/default/bin"
+
 "enable pathogen
 execute pathogen#infect()
 

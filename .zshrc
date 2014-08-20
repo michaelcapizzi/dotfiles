@@ -163,4 +163,6 @@ alias git-owner="git for-each-ref --format='%(committerdate) %09 %(authorname) %
 #java stuff
 JVM_OPTS="-Xmx2g"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+#for rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
