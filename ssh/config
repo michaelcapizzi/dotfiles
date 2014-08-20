@@ -27,6 +27,9 @@ Host shamhat
 Host dalek
 	ProxyCommand ssh -q gus@tunnel1 exec nc %h %p
 
+Host hpc
+	User hahnpowell
+	Hostname login.hpc.arizona.edu
 Host apil
 	User apiladmin
 	Hostname dhcp-80c45e2b.sbs.arizona.edu

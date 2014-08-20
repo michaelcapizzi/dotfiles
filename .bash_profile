@@ -63,10 +63,7 @@ alias amazon-pull="rsync -rtvazl amazon:/var/www/* ~/websites/amazon/"
 alias amazon-push="rsync -Ortvazl ~/websites/amazon/* amazon:/var/www/"
 
 #path stuff
-PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin
-
-#for play
-export PATH=$PATH:/Users/gus/github/play-2.0
+PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
 
 #app engine stuff
 alias rebuncloud-deploy="appcfg.py update ~/github/rebuncloud"
