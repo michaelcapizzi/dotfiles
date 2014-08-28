@@ -49,3 +49,7 @@ Host usystem
 Host amazon
 	User gus
 	Hostname parsertongue.com 
+
+Host kong
+	User gus
+	Hostname myedibleenso.ddns.net:22

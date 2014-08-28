@@ -12,6 +12,6 @@
 	default = current
 [core]
 	editor = vim
-	excludesfile = /Users/gus/.gitignore_global
+	excludesfile = ~/gus/.gitignore_global
 [color]
 	ui = 1
