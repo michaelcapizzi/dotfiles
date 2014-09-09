@@ -64,4 +64,23 @@ else
 	echo "custom theme already linked..."
 fi
 
+#add git stuff
+gitconfig=$(pwd -P)'/.gitconfig'
+if [ ! -e $gitconfig ];
+then
+	gitconfigdir=$(pwd -P)'/.gitconfig'
+	ln -s $gitconfigdir $gitconfig
+else
+	echo "gitconfig already linked..."
+fi
+
+gitignore=$(pwd -P)'/.gitignore_global'
+if [ ! -e $gitignore ];
+then
+	gitignoredir=$(pwd -P)'/.gitignore_global'
+	ln -s $gitignoredir $gitignore
+else
+	echo "gitignore_global already linked..."
+fi
+
 /bin/bash -c 'source .zshrc'
