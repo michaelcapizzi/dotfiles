@@ -69,7 +69,8 @@ export STANFORD_MODELS="/Users/gus/github/stanford/pos-tagger/models"
 export CORENLP="/Users/gus/github/stanford/stanford-corenlp-full-2014-01-04"
 
 #Path
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
+
+export PATH=$HOME/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
 
 
 #usystem stuff
@@ -152,6 +153,7 @@ export PATH=~/scripts:$PATH
 
 alias src="source ~/.zshrc"
 alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
+alias bionlp-sbt="JVM_OPTS=\"-Xmx3G -XX:MaxPermSize=1G\" sbt \"project core research\" console"
 
 #source syntax highlighting plugin:
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -163,6 +165,5 @@ alias git-owner="git for-each-ref --format='%(committerdate) %09 %(authorname) %
 #java stuff
 JVM_OPTS="-Xmx2g"
 
-export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 #for rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
