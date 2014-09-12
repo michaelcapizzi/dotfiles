@@ -83,4 +83,34 @@ else
 	echo "gitignore_global already linked..."
 fi
 
+#tmux config
+tmuxconfigdest=~/.tmux.conf
+if [ ! -e $tmuxconfigdest ];
+then
+	tmuxconfigdir=$(pwd -P)'/.tmux.conf'
+	ln -s $tmuxconfigdir $tmuxconfigdest
+else
+	echo ".tmux.conf already linked..."
+fi
+
+
+#vim config
+vimrcdest=~/.vimrc
+if [ ! -e $vimrcdest ];
+then
+	vimrcdir=$(pwd -P)'/.vimrc'
+	ln -s $vimrcdir $vimrcdest
+else
+	echo ".vimrc already linked..."
+fi
+
+vimdest = ~/.vim
+if [ ! -e $vimdest ];
+then
+	vimdir=$(pwd -P)'/.vim'
+	ln -s $vimdir $vimdest
+else
+	echo ".vim already linked..."
+fi
+
 /bin/bash -c 'source .zshrc'
