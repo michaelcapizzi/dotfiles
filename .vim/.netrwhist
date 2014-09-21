@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/gus/Desktop/poop'
 let g:netrw_dirhist_2='/data1/home/gus/github/config-files/.git'
+let g:netrw_dirhist_3='/Users/gus/github/clay-test/src/CMakeFiles'
+let g:netrw_dirhist_4='/Users/gus/github/clay-test/src/evolib/CMakeFiles'
+let g:netrw_dirhist_5='/Users/gus/github/clay-test/src/evo/CMakeFiles'
+let g:netrw_dirhist_6='/Users/gus/github/clay-test/CMakeFiles'
