@@ -70,7 +70,7 @@ export CORENLP="/Users/gus/github/stanford/stanford-corenlp-full-2014-01-04"
 
 #Path
 
-export PATH=$HOME/.rvm/bin:/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
+export PATH=$HOME/.rvm/bin:/usr/local/bin:opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
 
 
 #usystem stuff
