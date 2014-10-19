@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PYTHONPATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/site-packages"
+#export PYTHONPATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bin"
 
 #for Java
 export CLASSPATH="/Users/gus/Dropbox/nlp_tools:/opt/local/share/java/stanford-postagger:/opt/local/share/java/stanford-parser:/opt/local/share/java/stanford-ner"
@@ -70,8 +70,13 @@ export CORENLP="/Users/gus/github/stanford/stanford-corenlp-full-2014-01-04"
 
 #Path
 
-export PATH=$HOME/.rvm/bin:/usr/local/bin:opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
+#MACPORTS OPTION
+#export MPPYTHON="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
+#export PATH=$HOME/.rvm/bin:$MPPYTHON:opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
 
+#BREW OPTION
+#export PATH=$HOME/.rvm/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
+export PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/usr/local/mysql/bin:/Users/gus/github/play-2.0:$HOME/github/config-files/git-remote-hg
 
 #usystem stuff
 alias usystem-pull="scp -r  usystem:~/* ~/websites/usystem-site"
