@@ -78,9 +78,10 @@ export CORENLP="/Users/gus/github/stanford/stanford-corenlp-full-2014-01-04"
 #export PATH=$HOME/.rvm/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
 export PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/usr/local/mysql/bin:/Users/gus/github/play-2.0:$HOME/github/config-files/git-remote-hg
 
+alias scp='noglob scp'
 #usystem stuff
-alias usystem-pull="scp -r  usystem:~/* ~/websites/usystem-site"
-alias usystem-push="scp -r ~/websites/usystem-site/* usystem:~/"
+alias usystem-pull="scp -r usystem:~/* ~/websites/usystem-site"
+alias usystem-push="scp -r ~/websites/usystem-site/public_html usystem:~/"
 
 
 #app engine stuff
@@ -155,6 +156,9 @@ export PATH=~/scripts:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#For bionlp stuff
+export BANNER_DATA=$HOME/github/banner/banner_data
 
 alias src="source ~/.zshrc"
 alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
