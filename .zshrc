@@ -15,6 +15,9 @@ bindkey -e
 #enable zmv
 autoload -U zmv
 
+# command line edit
+bindkey -M vicmd v edit-command-line
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -163,6 +166,12 @@ export BANNER_DATA=$HOME/github/banner/banner_data
 alias src="source ~/.zshrc"
 alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
 alias bionlp-sbt="JVM_OPTS=\"-Xmx3G -XX:MaxPermSize=1G\" sbt \"project core research\" console"
+
+alias bio-eval-dev="python $HOME/github/sistanlp/src/main/resources/edu/arizona/sista/bionlp/evaluation-PC.py -r ~/Downloads/BioNLP-2013-PC/BioNLP-ST_2013_PC_development_data ~/Downloads/BioNLP-2013-PC/output/*.a2"
+alias bio-eval-train="python $HOME/github/sistanlp/src/main/resources/edu/arizona/sista/bionlp/evaluation-PC.py -r ~/Downloads/BioNLP-2013-PC/BioNLP-ST_2013_PC_training_data ~/Downloads/BioNLP-2013-PC/output/*.a2"
+alias bio-extractor="cd ~/github/sistanlp; sbt \"run-main edu.arizona.sista.bionlp.reach.brat.TestExtractor\""
+alias rule-demo-start="~/github/rule-demo/apache-tomcat-7.0.53/bin/catalina.sh start"
+alias rule-demo-stop="~/github/rule-demo/apache-tomcat-7.0.53/bin/catalina.sh stop"
 
 #source syntax highlighting plugin:
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
