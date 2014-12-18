@@ -21,6 +21,14 @@ Host amy2
 	Hostname amy
 	ProxyCommand ssh -q -W %h:%p tunnel2
 
+Host jenny
+	ForwardX11 yes
+	ProxyCommand ssh -q -W %h:%p tunnel1
+
+Host jenny2
+	Hostname jenny
+	ProxyCommand ssh -q -W %h:%p tunnel2
+
 Host shamhat
 	ProxyCommand ssh -q gus@tunnel1 exec nc %h %p
 
