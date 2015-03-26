@@ -130,10 +130,6 @@ if [ -d /data1/nlp ]; then
 		########################
 		#SVM
 		export PATH=/data/nlp/code/svm_rank:$PATH
-		#######################
-		#local sbt
-		export PATH=~/bin:$PATH
-		#alias sbt="~/bin/sbt -java-home ~/bin/jdk1.7.0_51/"
 fi
 
 #######################
@@ -164,15 +160,13 @@ export PATH=~/scripts:$PATH
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="atom ~/.zshrc"
+# alias ohmyzsh="atom ~/.oh-my-zsh"
 
-#For bionlp stuff
-#export BANNER_DATA=$HOME/github/banner/banner_data
 
 alias src="source ~/.zshrc"
-alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
-alias bionlp-sbt="JVM_OPTS=\"-Xmx3G -XX:MaxPermSize=1G\" sbt \"project core research\" console"
+#alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
+#alias bionlp-sbt="JVM_OPTS=\"-Xmx3G -XX:MaxPermSize=1G\" sbt \"project core research\" console"
 
 alias bio-eval-dev="python $HOME/github/sistanlp/src/main/resources/edu/arizona/sista/bionlp/evaluation-PC.py -r ~/Downloads/BioNLP-2013-PC/BioNLP-ST_2013_PC_development_data ~/Downloads/BioNLP-2013-PC/output/*.a2"
 alias bio-eval-train="python $HOME/github/sistanlp/src/main/resources/edu/arizona/sista/bionlp/evaluation-PC.py -r ~/Downloads/BioNLP-2013-PC/BioNLP-ST_2013_PC_training_data ~/Downloads/BioNLP-2013-PC/output/*.a2"
@@ -188,7 +182,7 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias git-owner="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
 
 #java stuff
-JVM_OPTS="-Xmx2g"
+#JVM_OPTS="-Xmx2g"
 
 #for rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
