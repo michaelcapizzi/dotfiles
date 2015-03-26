@@ -1,12 +1,13 @@
 ForwardAgent yes
 
-Host tunnel1 
+Host tunnel1
     Hostname tunnel1.sista.arizona.edu
 Host tunnel2
     Hostname tunnel2.sista.arizona.edu
 
 Host river
-	ForwardX11 yes
+	ForwardX11Trusted yes
+	#ForwardX11 yes
 	ProxyCommand ssh -q -W %h:%p tunnel1
 
 Host river2
@@ -14,7 +15,8 @@ Host river2
     ProxyCommand ssh -q -W %h:%p tunnel2
 
 Host amy
-	ForwardX11 yes
+	ForwardX11Trusted yes
+	#ForwardX11 yes
 	ProxyCommand ssh -q -W %h:%p tunnel1
 
 Host amy2
@@ -22,14 +24,21 @@ Host amy2
 	ProxyCommand ssh -q -W %h:%p tunnel2
 
 Host jenny
-	ForwardX11 yes
+	ForwardX11Trusted yes
+	#ForwardX11 yes
 	ProxyCommand ssh -q -W %h:%p tunnel1
 
 Host jenny2
 	Hostname jenny
 	ProxyCommand ssh -q -W %h:%p tunnel2
 
+Host jen
+	Hostname jenny
+	ProxyCommand ssh -q tunnel2.sista.arizona.edu -W 10.192.92.52:22
+	LocalForward 8081 localhost:8080
+
 Host shamhat
+	ForwardX11Trusted yes
 	ProxyCommand ssh -q gus@tunnel1 exec nc %h %p
 
 Host dalek
@@ -56,8 +65,13 @@ Host usystem
 
 Host amazon
 	User gus
-	Hostname parsertongue.com 
+	Hostname parsertongue.com
 
 Host kong
 	User gus
 	Hostname myedibleenso.ddns.net:22
+
+Host ben
+  ForwardX11Trusted yes
+  User gus
+  Hostname phsyron.no-ip.org

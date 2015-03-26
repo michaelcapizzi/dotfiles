@@ -1,3 +1,8 @@
+# no root priveleges and no zsh?
+#if [ -f $HOME/bin/zsh ]; then
+#			exec $HOME/bin/zsh -l
+#fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -99,30 +104,32 @@ if [ -d ~/.ec2 ]; then
 	export EC2_URL="https://us-west-1.ec2.amazonaws.com/"
 	export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
 	export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+	#for geo stuff
+	export DYLD_LIBRARY_PATH=/Users/tc9/homebrew/lib
 	fi
 
 if [ -d /data1/nlp ]; then
 		###############################
 		#newer scala
-		export SCALA_HOME=/data1/nlp/code/scala-2.10.1
-		export PATH=$SCALA_HOME/bin:$PATH
+		#export SCALA_HOME=/data/nlp/code/scala-2.10.1
+		#export PATH=$SCALA_HOME/bin:$PATH
 
 		##############################
 		#Java classpath
-		CLASSPATH=/data1/home/gus/nlp_tools
+		CLASSPATH=/data/home/gus/nlp_tools
 		export CLASSPATH
 
 		#########################
 		#GIZA++
-		export PATH=/data1/nlp/code/giza/GIZA++-v2:$PATH
+		export PATH=/data/nlp/code/giza/GIZA++-v2:$PATH
 
 		##############################
 		#W2V
-		export PATH=/data1/nlp/code/word2vec/trunk/:$PATH
+		export PATH=/data/nlp/code/word2vec/trunk/:$PATH
 
 		########################
 		#SVM
-		export PATH=/data1/nlp/code/svm_rank:$PATH
+		export PATH=/data/nlp/code/svm_rank:$PATH
 		#######################
 		#local sbt
 		export PATH=~/bin:$PATH
@@ -161,7 +168,7 @@ export PATH=~/scripts:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #For bionlp stuff
-export BANNER_DATA=$HOME/github/banner/banner_data
+#export BANNER_DATA=$HOME/github/banner/banner_data
 
 alias src="source ~/.zshrc"
 alias sistanlp-sbt="JVM_OPTS=\"-Xmx5G -XX:MaxPermSize=1G\" sbt \"project core\" console"
@@ -184,4 +191,4 @@ alias git-owner="git for-each-ref --format='%(committerdate) %09 %(authorname) %
 JVM_OPTS="-Xmx2g"
 
 #for rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

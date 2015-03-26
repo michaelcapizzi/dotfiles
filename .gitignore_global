@@ -1,5 +1,12 @@
-# Python 
+# Flask
+instance/
+venv/
+
+# Python
 *.pyc
+*.pyo
+
+*~
 
 # Intellij
 .idea/
@@ -25,3 +32,21 @@ main.pdf
 main.out
 main.brf
 .texpadtmp/
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+#texpad
+.tpbuild
