@@ -86,6 +86,9 @@ export CORENLP="/Users/gus/github/stanford/stanford-corenlp-full-2014-01-04"
 #export PATH=$HOME/.rvm/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/opt/local/libexec/word2vec:/usr/local/mysql/bin:/Users/gus/github/play-2.0
 export PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/opt/X11/bin:/usr/texbin:/usr/local/mysql/bin:/Users/gus/github/play-2.0:$HOME/github/config-files/git-remote-hg
 
+#size of contents of directory
+alias size-all="du -sch * | sort -h"
+
 alias scp='noglob scp'
 #usystem stuff
 alias usystem-pull="scp -r usystem:~/* ~/websites/usystem-site"
@@ -96,6 +99,10 @@ alias usystem-push="scp -r ~/websites/usystem-site/public_html usystem:~/"
 alias rebuncloud-deploy="appcfg.py update ~/github/rebuncloud"
 
 if [ -d ~/.ec2 ]; then
+	
+	#add alias for homebrew
+	alias sort="gsort"
+	
 	# Control will enter here if $DIRECTORY exists.
 	#AMAZON ec2 stuff
 	export PATH=$PATH:$EC2_HOME/bin
