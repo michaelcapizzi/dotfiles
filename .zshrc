@@ -65,6 +65,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+
+source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Venvs
 # User configuration
 
 #export PYTHONPATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bin"
@@ -137,6 +141,10 @@ if [ -d /data1/nlp ]; then
 		########################
 		#SVM
 		export PATH=/data/nlp/code/svm_rank:$PATH
+
+		########################
+		#NXML2TXT
+		export PATH=~/repos/nxml2txt:$PATH
 fi
 
 #######################
