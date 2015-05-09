@@ -7,8 +7,8 @@ Host tunnel2
 
 Host river
 	ForwardX11Trusted yes
-	#ForwardX11 yes
-	ProxyCommand ssh -q -W %h:%p tunnel1
+	ProxyCommand ssh -q tunnel1 -W river:22
+    LocalForward 8082 localhost:80
 
 Host river2
     Hostname river
